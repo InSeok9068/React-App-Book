@@ -85,19 +85,32 @@ class App extends Component {
   }
 }
 
-class Search extends Component {
-  render(){
-    const { value, onChange } = this.props
-    return (
-      <form>
-        <input
-          type="text"
-          value={value}
-          onChange={onChange}
-        />
-      </form>
-    )
-  }
+// class Search extends Component {
+//   render(){
+//     const { value, onChange, children } = this.props;
+//     return (
+//       <form>
+//         {children} <input
+//           type="text"
+//           value={value}
+//           onChange={onChange}
+//         />
+//       </form>
+//     )
+//   }
+// }
+
+// 비 상태 함수형 컴포넌트
+const Search = ({value, onChange, children}) => {
+  return (
+    <form>
+      {children} <input
+        type="text"
+        value={value}
+        onChange={onchange}
+      />
+    </form>
+  )
 }
 
 class Table extends Component {
@@ -113,17 +126,35 @@ class Table extends Component {
             <span>{item.author}</span>
             <span>{item.num_comments}</span>
             <span>{item.points}</span>
-            <spam>
-              <button onClick={() => onDismiss(item.objectID)}
-                type="button"
-              >
-                dismiss
-              </button>
-            </spam>
+            <span>
+              <Button onClick={() => onDismiss(item.objectID)}>
+                Dismiss
+              </Button>
+            </span>
           </div>  
         )}
       </div>
     );
+  }
+}
+
+class Button extends Component {
+  render() {
+    const {
+      onClick,
+      className = '',
+      children,
+    } = this.props;
+
+    return (
+      <button
+        onClick={onClick}
+        className={className}
+        type="button"
+      >
+        {children}
+      </button>
+    )
   }
 }
 
