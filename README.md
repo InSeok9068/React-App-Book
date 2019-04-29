@@ -4,6 +4,9 @@ http://www.realhanbit.co.kr/books/87/pages/974/preview
 
 ` <- ESC 밑에있는 키를 사용 템플릿 리터널
 
+# axios 설치
+npm install axios
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
