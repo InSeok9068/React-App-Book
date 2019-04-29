@@ -223,7 +223,7 @@ const Search = ({value, onChange, children, onSubmit}) =>
     <form onSubmit={onSubmit}>
       <input
         type="text"
-        value={value}
+        defaultValue={value}
         onChange={onchange}
       />
       <button type="submit">
@@ -237,12 +237,12 @@ class Table extends Component {
     const largeColumn = {
       width : '40%'
     }
-    const midColumn = {
-      width : '40%'
-    }
-    const smallColumn = {
-      width : '40%'
-    }
+    // const midColumn = {
+    //   width : '40%'
+    // }
+    // const smallColumn = {
+    //   width : '40%'
+    // }
     const { list, onDismiss }  = this.props;
     return (
       <div className="table">
