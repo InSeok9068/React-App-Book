@@ -145,7 +145,7 @@ class App extends Component {
     this.setState({
       results: {
         ...results,
-        [searchKey]: { hit: updatedHits, page}
+        [searchKey]: { hits: updatedHits, page}
       }
     });
   }
@@ -223,7 +223,7 @@ const Search = ({value, onChange, children, onSubmit}) =>
     <form onSubmit={onSubmit}>
       <input
         type="text"
-        defaultValue={value}
+        defaultValue={value} 
         onChange={onchange}
       />
       <button type="submit">
